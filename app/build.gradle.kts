@@ -55,6 +55,7 @@ dependencies {
     implementation(ApplicationLibs.appcompat)
     implementation(ApplicationLibs.materialUI)
     implementation(ApplicationLibs.constraintLayout)
+    implementation(ApplicationLibs.paging)
     /** Activity KTX for viewModels() **/
     implementation(ApplicationLibs.activityKtx)
     /** Dagger - Hilt **/
@@ -70,6 +71,14 @@ dependencies {
     /** Retrofit 2 **/
     implementation(ApplicationLibs.retrofit)
     implementation(ApplicationLibs.gson)
+    /** Binding Adapter Collection **/
+    implementation(ApplicationLibs.bindingAdapterCore)
+    implementation(ApplicationLibs.bindingAdapterRecycler)
+    implementation(ApplicationLibs.bindingAdapterPaging)
+    /** Glide **/
+    implementation(ApplicationLibs.glide)
+    implementation(ApplicationLibs.glidePalette)
+    kapt(ApplicationLibs.glideCompiler)
 
     /** Test Libs **/
     testImplementation(TestLibs.junit)

@@ -23,7 +23,9 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentHomeBinding.inflate(inflater, container, false).also {
+            it.lifecycleOwner = viewLifecycleOwner
             it.vm = viewModel
+            it.executePendingBindings()
         }
         return binding.root
     }
@@ -35,6 +37,6 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.init()
+
     }
 }
